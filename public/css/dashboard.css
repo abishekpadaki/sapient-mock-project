@@ -126,4 +126,15 @@
         body{
             background-color: beige;
         }
+
+        .profile_info{
+            margin-left: 5px;
+        }
+
+        /* .search_card_buttons{
+            display: -webkit-inline-box;
+        } */
+.self_fb_button{
+    padding-bottom: 5px;
+}
        
