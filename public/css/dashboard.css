@@ -114,3 +114,16 @@
         .profilePic{
             margin-right:0%;
         }
+
+        .card{
+            cursor: pointer;
+        }
+
+        .navbar{
+            background-color: white;
+        }
+
+        body{
+            background-color: beige;
+        }
+       
