@@ -10,7 +10,7 @@ body{
 }
 .header_uname{
     text-align: left;
-    width: 25%%;
+    width: 25%;
 }
 .role_type{
     text-align: left;
@@ -20,9 +20,6 @@ body{
     border: black 1px dotted;
 }
 
-.head{
-    
-}
 
 .log_out{
     float: right;
