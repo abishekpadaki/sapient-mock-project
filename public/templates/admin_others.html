@@ -12,6 +12,7 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/sudperAdmin.css">
     <script src="../js/super_Admin.js"></script>
+    <script src="../js/admin_others.js"></script>
 </head>
 
 <body>
@@ -105,24 +106,24 @@
                             <!-- <button onclick="myFunction()" class="mx-4 notification dropbtn"> <i class="fas fa-bell"></i> -->
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModal">
+                                data-target="#registerModal">
                                 Register
                             </button>
 
                             <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="registerModal" tabindex="-1" role="dialog"
+                                aria-labelledby="registerModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Enter registrations details
+                                            <h5 class="modal-title" id="registerModalLabel">Enter registration details
                                             </h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form action="" method="post">
+                                            <form id="registerForm" action="" method="post">
                                                 <div class="form-group">
                                                     <!-- <label for="firstName">Oracle ID:</label> -->
                                                     <input type="text" class="form-control" id="firstName"
@@ -158,12 +159,14 @@
                                                     <input type="password" class="form-control" id="confirmPassword"
                                                         placeholder=" Confirm password">
                                                 </div>
+                                                <!-- <button class="btn btn-danger" onclick="resetFunction()">Reset</button> -->
+                                                <button type="submit" class="btn btn-primary">Register</button>
                                             </form>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                            <!-- <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button> -->
+                                            <button class="btn btn-danger" onclick="resetFunction()">Reset</button>
                                         </div>
                                     </div>
                                 </div>
