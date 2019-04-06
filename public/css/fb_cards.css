@@ -1,0 +1,33 @@
+.fb_card_title{
+    
+    margin:0%;
+    
+    
+}
+
+b{
+    color: lightseagreen;
+}
+
+.fb_text{
+    padding: 8px;
+    text-align: center;
+    border-top: gray 1px solid;
+    border-bottom: gray 1px solid;
+    font-family: 'Roboto';
+}
+
+.fb_card_rating{
+   
+    padding-top: 8px;
+    float: right;
+}
+
+.fb_card_links{
+    
+    padding:5px;
+}
+
+.fb_card_links > a{
+    color: crimson;
+}
