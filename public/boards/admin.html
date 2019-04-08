@@ -13,46 +13,58 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/super_admin.css">
+    <link rel="stylesheet" href="../css/fb_cards.css">
+
     <script src="../jsonData/feedBack.js"></script>
     <script src="../jsonData/peopleDetails.js"></script>
     <script src="../jsonData/requestDb.js"></script>
 
-    
-
 </head>
 
 <body>
-    
     <nav class="navbar">
-        <div class="row col-md-12" style="height:100px;">
+        <div class="row col-md-12">
             <div class="col-md-2">
-                <a href="#" class="pull-left"><img src="../images/publicis-sapient1.png"></a>
+                <a href="#" class="pull-left"><img src="../images/publicis-sapient.png"></a>
             </div>
 
-            <div class="search_bar col-md-6">
+            <div class="search_bar col-md-8">
 
                 <div class="row ml-2 mt-4">
                     <div class="form-group has-search ">
                         <span class="fa fa-search form-control-feedback"></span>
-                        <input type="text" class="form-control" placeholder="Search Employee ...">
+                        <input type="text" style="width:600px;" class="form-control" placeholder="Search Employee ...">
+                    </div>
+                    <div class="dropdown mx-4">
+                        <button class="btn btn-primary notification" id="dropDownBtn">
+                            <i class="fas fa-bell"></i>
+                            <span style="visibility:hidden" class="badge">0</span>
+                        </button>
+
+                        <div class="dropdown-content" id="dropDownContent">
+                            <h3 class="requestfb">FeedBack Requests</h3>
+                        </div>
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-primary ml-3">Enter</button>
+                        <a href="#" class="feedback">
+                            <span>FeedBacks</span>
+                            <span class="badge">10</span>
+                        </a>
                     </div>
                 </div>
+                <div class="search_buttons row ml-1">
+                    <button type="button" class="btn btn-primary mr-2">
+                        <i class="fas fa-search"></i>&nbsp;&nbsp;OracleID
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="fas fa-search"></i> &nbsp;&nbsp;Name
+
+                    </button>
+                </div>
+
             </div>
 
-            <div class="log_out col-md-4 mt-4">
-                <div class="dropdown mx-4">
-                    <button class="btn btn-primary notification" id="dropDownBtn">
-                        <i class="fas fa-bell"></i>
-                        <span style="visibility:hidden" class="badge">0</span>
-                    </button>
-
-                    <div class="dropdown-content" id="dropDownContent">
-                        <h3 class="requestfb">FeedBack Requests</h3>
-                    </div>
-                </div>
+            <div class="log_out col-md-2 mt-4">
                 <a href=""><i class="fas fa-sign-out-alt fa-lg"></i>
                     Log Out</a>
             </div>
@@ -67,48 +79,27 @@
                 </div>
                 <div class="mt-4">
                     <b><span style="color:rgb(36, 41, 46)">
-                            <font size=5>Abishek Padaki</font>
+                            <font size=5></font>
                         </span></b>
                 </div>
                 <div>
                     <span class="oracleId" style="color:rgb(102, 102, 102)">
-                        1511003010585
                     </span>
                 </div>
                 <div>
                     <span class="role_type" style="color:rgb(102, 102, 102)">
-                        Human Resources
                     </span>
                 </div>
             </div>
             <div class="col-9">
                 <div class="row body_row_1">
-                    <div class="card card_one col-md-5" style="width: 15rem;">
-                        <div class="card-body">
-                            <h5>Previous Feedback</h5>
-                        </div>
-                    </div>
                 </div>
-                <div class="row body_row_2 mt-4 ">
-                    <div class="card mr-5 col-md-5" style="width: 15rem;">
-                        <div class="card-body">
-                            <h5>Registration</h5>
-                        </div>
-                    </div>
-
-                    <div class="card col-md-5" style="width: 15rem;">
-                        <div class="card-body">
-                            <h5>Count of Candidates</h5>
-                        </div>
-                    </div>
-
-                </div>
-
             </div>
 
         </div>
     </div>
     <script src="../js/super_Admin.js"></script>
+    <script src="../js/fb_card_modals.js"></script>
 </body>
 
 </html>
