@@ -173,3 +173,11 @@
             overflow-wrap: break-word;
             display: inline;
           }
+          input[type=text] {
+            width: 300px;
+            -webkit-transition: width .35s ease-in-out;
+            transition: width .35s ease-in-out;
+          }
+          input[type=text]:focus {
+            width: 450px;
+          }
