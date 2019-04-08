@@ -20,15 +20,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="stylesheet" href="../css/super_admin.css" >
+    <link rel="stylesheet" href="../css/super_admin.css">
     <link rel="stylesheet" href="../css/fb_cards.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    
+    <script src="../jsonData/feedBack.js"></script>
+
 </head>
 
 <body>
     <nav class="navbar">
-        
+
         <div class="row col-md-12">
             <div class="col-md-2">
                 <a href="#" class="pull-left"><img src="../images/publicis-sapient.png"></a>
@@ -84,8 +85,8 @@
     </nav>
 
 
-    <div class="container-fluid main_body">
-        <div class="row">
+    <div class="container-fluid main_body" id="main_body">
+        <!----div class="row">
 
 
             <div class="card card_one col-md-8" style="width: 50rem;">
@@ -98,49 +99,51 @@
                             after lunch but other than that very nice employee. can buy deodrant next time. especially
                             after eating canteen dal rice. very good work ethics.<b>``</b></p>
                     </div>
-                    <div class="row fb_card_links">
-                            <button class="btn btn-danger" id="growth_btn">Growth Areas</button>&nbsp; &nbsp; <button class="btn btn-danger" id="top5_btn">Top 5</button>
-                         
+                        <div class="row fb_card_links">
+                            <button class="btn btn-danger" id="growth_btn">Growth Areas</button>&nbsp; &nbsp; <button
+                                class="btn btn-danger" id="top5_btn">Top 5</button>
+
                             <div id="myModal" class="modal">
 
-                                <!-- Modal content -->
-                                <div class="modal-content">
-                                  <div class="close">&times;</div>
-                                  <h4 style="color: red;">Growth Areas</h4>
-                                  <p>Can do better</p>
-                                  <p>Reason 2</p>
-                                  <p>Stop giving unnecessary lectures</p>
-                                  <p>Just another sentence</p>
-                                </div>
-                              
                                 
-                              </div>
-
-                              <div id="myModal2" class="modal">
-
-                                <!-- Modal content -->
                                 <div class="modal-content">
-                                  <div class="close2">&times;</div>
-                                  <h4 style="color: red;">Top 5 stuff</h4>
-                                  <p>He is wow</p>
-                                  <p>Amaze core values</p>
-                                  <p>Full openness</p>
-                                  <p>super communication</p>
-                                  <p>Very leadership material</p>
+                                    <div class="close">&times;</div>
+                                    <h4 style="color: red;">Growth Areas</h4>
+                                    <p>Can do better</p>
+                                    <p>Reason 2</p>
+                                    <p>Stop giving unnecessary lectures</p>
+                                    <p>Just another sentence</p>
+                                </div>
+
+
+                            </div>
+
+                            <div id="myModal2" class="modal">
+
+                               
+                                <div class="modal-content">
+                                    <div class="close2">&times;</div>
+                                    <h4 style="color: red;">Top 5 stuff</h4>
+                                    <p>He is wow</p>
+                                    <p>Amaze core values</p>
+                                    <p>Full openness</p>
+                                    <p>super communication</p>
+                                    <p>Very leadership material</p>
 
                                 </div>
-                              
-                                
-                              </div>
+
+
+                            </div>
                         </div>
-                    <div class="row fb_card_rating">
-                           <b>Rating:&nbsp;</b> <i class="far fa-star"></i> &nbsp;<b>5</b>
+                        <div class="row fb_card_rating">
+                            <b>Rating:&nbsp;</b> <i class="far fa-star"></i> &nbsp;<b>5</b>
                         </div>
+                    </div>
                 </div>
             </div>
+        </div-->
         </div>
-    </div>
-    <script src="../js/fb_card_modals.js"></script>
+        <script src="../js/fb_card_modals.js"></script>
 </body>
 
 </html>
