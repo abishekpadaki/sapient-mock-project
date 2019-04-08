@@ -88,7 +88,5 @@
 
       // document.location.href = "./super_admin_retrive_fb.html";
     }
-
-
   });
 })();
