@@ -1,7 +1,5 @@
-
-
-    //let dataBase = window.dataBase;
-    //let requests = window.requests;
+let dataBase = window.dataBase;
+let requests = window.requests;
 
 
 function Validate() {
@@ -20,7 +18,7 @@ function Validate() {
         "EmailId": document.getElementById("email").value,
         "gender": document.getElementsByName("gender").value,
         "password": document.getElementById("password").value,
-        "role": document.getElementById("role").value;
+        "role": document.getElementById("role").value
     });
 
 
@@ -30,15 +28,9 @@ function Validate() {
 }
 
 
-    //admin_pm k andar form waala
-    function resetFunction() {
-        document.getElementById("registerForm").reset();
-    }
+//admin_pm k andar form waala
+function resetFunction() {
+    document.getElementById("registerForm").reset();
+}
 
-    console.log(dataBase);
-
-
-
-
-
-
+console.log(dataBase);

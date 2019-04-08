@@ -1,20 +1,42 @@
 (function () {
   "use strict"
 
-  let dataBase = window.dataBase;
+  let role = sessionStorage.getItem("Role");
+  let oracleId = sessionStorage.getItem("OracleId");
+
   let requests = window.requests;
 
   let dropDwnCnt = document.getElementById('dropDownContent');
 
-  let updateNotifications = () => {
-    dropDwnCnt.innerHTML = `<h3 class="requestfb">FeedBack Requests</h3> <hr>`;
-    for (let request of requests) {
+  let link;
+
+  if(role == "PM"|| role == "CT" || role == "HR" || role == "Mentor" || role == "Trainee")
+    link = "../boards/feedback.html";
+  else if(role == "SuperAdmin"){
+    link="./super_admin_retrive_fb.html";
+  }  
+
+  let getData = (role, oracleId) => {
+    let value = requests.find((val) => {
+      return val.OracleId == oracleId && val.role == role;
+    });
+    return value.notifications;
+  }
+
+  let notifications = getData(role, oracleId);
+
+  let updateNotifications = (notifications) => {
+
+    dropDwnCnt.innerHTML = `<h3 class="requestfb">Notifications</h3> <hr>`;
+
+    for (let i = 0; i < notifications.Requester.length; i++) {
+
       let requester = dataBase.findIndex((val) => {
-        return val.OracleId == request.Requester;
+        return val.OracleId == notifications.Requester[i];
       });
 
       let requestedFor = dataBase.findIndex((val) => {
-        return val.OracleId == request.RequestedFor;
+        return val.OracleId == notifications.RequestedFor[i];
       });
 
       dropDwnCnt.innerHTML += `
@@ -27,65 +49,54 @@
             </span>
             <hr>`;
     }
-  }
 
-  if (requests.length > 0) {
     let badge = document.getElementsByClassName('badge')[0];
     badge.style.visibility = "visible";
-    badge.innerHTML = requests.length;
+    badge.innerHTML = notifications.Requester.length;
   }
 
-  updateNotifications();
+  updateNotifications(notifications);
 
   dropDwnCnt.addEventListener('click', (event) => {
 
+    let data, flag = 0;
+
     if (event.target.tagName === "B") {
-      let data = event.target.parentElement.getElementsByTagName('P');
-
-      let badge = document.getElementsByClassName('badge')[0];
-      badge.innerHTML = parseInt(badge.innerHTML) - 1;
-
-      sessionStorage.setItem("requesterOracleId", parseInt(data[0].innerHTML));
-      sessionStorage.setItem("requestedForOracleId", parseInt(data[1].innerHTML));
-
-      if(parseInt(badge.innerHTML) == 0) {
-        badge.style.visibility = "hidden";
-      }
-
-      let index = requests.findIndex((val) => {
-        return ((parseInt(data[0].innerHTML) == val.Requester) && (parseInt(data[1].innerHTML) == val.RequestedFor));
-      });
-
-      requests.splice(index,1);
-      updateNotifications();
-
-
-      document.location.href = "./super_admin_retrive_fb.html";
-
+       data = event.target.parentElement.getElementsByTagName('P');
+      flag = 1;
     }
+
     if (event.target.className === "requestCnt") {
-      let data = event.target.getElementsByTagName('P');
+       data = event.target.getElementsByTagName('P');
+      flag = 1;
+    }
 
+    if (flag) {
       let badge = document.getElementsByClassName('badge')[0];
       badge.innerHTML = parseInt(badge.innerHTML) - 1;
 
       sessionStorage.setItem("requesterOracleId", parseInt(data[0].innerHTML));
       sessionStorage.setItem("requestedForOracleId", parseInt(data[1].innerHTML));
 
-      if(parseInt(badge.innerHTML) == 0) {
+      if (parseInt(badge.innerHTML) == 0) {
         badge.style.visibility = "hidden";
       }
 
-      let index = requests.findIndex((val) => {
-        return ((parseInt(data[0].innerHTML) == val.Requester) && (parseInt(data[1].innerHTML) == val.RequestedFor));
-      });
+      let index;
 
-      requests.splice(index,1);
-      updateNotifications();
+      for (let i = 0; i < notifications.Requester.length; i++) {
+        if ((parseInt(data[0].innerHTML) == notifications.Requester)[i] && (parseInt(data[1].innerHTML) == notifications.RequestedFor[i])) {
+          index = i;
+          break;
+        }
+      }
 
-      // document.location.href = "./super_admin_retrive_fb.html";
+      notifications.Requester.splice(index, 1);
+      notifications.RequestedFor.splice(index, 1);
+
+      updateNotifications(notifications);
+
+      document.location.href = link;
     }
-
-
   });
 })();
