@@ -6,7 +6,7 @@ var dataBase = [
         "EmailId": "john@gmail.com",
         "gender": "male",
         "password": "lochan123",
-        "role":"HR"
+        "role":"HR" 
     },
     {
         "OracleId": "123557",
