@@ -1,4 +1,4 @@
-(function () {
+(() => {
   "use strict"
 
   let role = sessionStorage.getItem("Role");
@@ -62,18 +62,18 @@
     let data, flag = 0;
 
     if (event.target.tagName === "B") {
-       data = event.target.parentElement.getElementsByTagName('P');
-      flag = 1;
+        data = event.target.parentElement.getElementsByTagName('P');
+        flag = 1;
     }
 
     if (event.target.className === "requestCnt") {
-       data = event.target.getElementsByTagName('P');
-      flag = 1;
+        data = event.target.getElementsByTagName('P');
+        flag = 1;
     }
 
     if (flag) {
-      let badge = document.getElementsByClassName('badge')[0];
-      badge.innerHTML = parseInt(badge.innerHTML) - 1;
+        let badge = document.getElementsByClassName('badge')[0];
+        badge.innerHTML = parseInt(badge.innerHTML) - 1;
 
       sessionStorage.setItem("requesterOracleId", parseInt(data[0].innerHTML));
       sessionStorage.setItem("requestedForOracleId", parseInt(data[1].innerHTML));
