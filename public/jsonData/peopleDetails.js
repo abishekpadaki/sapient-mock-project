@@ -62,7 +62,7 @@ var dataBase = [
         "EmailId": "anurag@gmail.com",
         "gender": "male",
         "password": "hakeem123",
-        "role":"Trainee"
+        "role":"Trainer"
     },
     
 ];
