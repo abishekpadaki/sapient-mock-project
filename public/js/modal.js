@@ -19,14 +19,7 @@
         for(let i of top5Stuff){
             document.getElementsByClassName('modal-content')[1].innerHTML += `<p>${i}</p>`
         }   
-        addModal(0);
-        addModal(1);
-
-        document.getElementsByClassName('card-body')[0].addEventListener('click',()=>{
-            document.location.href = "" ;
-        });
     }
-
 
     let addModal = (i)=>{
         let modal = document.getElementsByClassName('modal')[i];
@@ -45,12 +38,15 @@
             if (event.target == modal) {                
                 modal.style.display = "none";
             }
+            event.stopPropagation();
         }
     }
 
     if (role == "SuperAdmin") {
         document.getElementById('cardTitle').innerHTML = `<p><b>Feedback from &nbsp;</b>${details.FirstName}</p>`;
         addFeedBackContent(feedBack);
+        addModal(0);
+        addModal(1);
     } else {
         let feeds = feedBack.filter((val) => {
             return val.OracleId == oracleId;
@@ -60,5 +56,11 @@
         });
         document.getElementById('cardTitle').innerHTML = `<p><b>Feedback from &nbsp;</b>${details.FirstName}</p>`;
         addFeedBackContent(feeds);
+        addModal(0);
+        addModal(1);
+        let cardBody = document.getElementsByClassName('card-body');
+        // cardBody[0].addEventListener('click',()=>{
+        //     document.location.href = "";
+        // });
     }
 })();

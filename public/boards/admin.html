@@ -57,7 +57,7 @@
             </div>
 
             <div class="log_out col-md-4 mt-4">
-                <div class="dropdown mx-4">
+                <div class="dropdown mx-1">
                     <button class="btn btn-primary notification" id="dropDownBtn">
                         <i class="fas fa-bell"></i>
                         <span style="visibility:hidden" class="badge">0</span>
@@ -67,6 +67,7 @@
                         <h3 class="requestfb">FeedBack Requests</h3>
                     </div>
                 </div>
+                <span class="dropdownRegister mx-2"></span>
                 <a href=""><i class="fas fa-sign-out-alt fa-lg"></i>
                     Log Out</a>
             </div>
@@ -130,23 +131,36 @@
             </div>
 
         </div>
-        <div class="row">
-            <div class="col-3"></div>
+        <div class="row mt-4">
+            <div class="col-3">
+                <div class="mt-4">
+                    <b><span style="color:rgb(36, 41, 46)"> Count Of Candidates
+                        </span></b>
+                </div>
+                <div class="mt-4">
+                    <b><span class="fBgiven" style="color:rgb(102, 102, 102)"> Feed Back Given
+                        </span></b>
+                </div>
+                <div class="mt-4">
+                    <b><span class="fBgot" style="color:rgb(102, 102, 102)"> Got Feed Back from 
+                        </span></b>
+                </div>
+            </div>
             <div class="col-9">
                 <div class="row body_row_2 mt-4 ">
                     <span class="col-6" id="reqreg"></span>
                     <span class="col-6" id="reqsa"></span>
                 </div>
+
             </div>
         </div>
+    </div>
 
         <script src="../js/admin.js"></script>
         <script src="../js/dropDown.js"></script>
         <script src="../js/modal.js"></script>
         <script src="../js/reqreg.js"></script>
         <script src="../js/reqsa.js"></script>
-
-
 </body>
 
 </html>
