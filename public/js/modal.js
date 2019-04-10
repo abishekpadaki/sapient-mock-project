@@ -23,7 +23,7 @@
         addModal(1);
 
         document.getElementsByClassName('card-body')[0].addEventListener('click',()=>{
-            // document.location.href = "";
+            document.location.href = "" ;
         });
     }
 
@@ -32,11 +32,13 @@
         let modal = document.getElementsByClassName('modal')[i];
         let btn = document.getElementsByClassName('modalBtn')[i];
         let closeBtn = document.getElementsByClassName("close");
-        btn.addEventListener( 'click', () => {
+        btn.addEventListener( 'click', (event) => {
             modal.style.display = "block";
+            event.stopPropagation();
         });
         closeBtn[i].addEventListener('click', () => {
             modal.style.display = "none";
+            event.stopPropagation();
         });
         window.onclick = (event)=>{
             // console.log(event.target,modal);
