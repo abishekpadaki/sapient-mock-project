@@ -21,7 +21,6 @@
         }   
     }
 
-
     let addModal = (i)=>{
         let modal = document.getElementsByClassName('modal')[i];
         let btn = document.getElementsByClassName('modalBtn')[i];
