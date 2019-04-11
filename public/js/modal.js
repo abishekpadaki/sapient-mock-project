@@ -13,6 +13,9 @@
         growthAreas = feeds[0].GrowthAreas.split(',');    
         top5Stuff = feeds[0].Top5Stuff.split(',');
 
+        // document.getElementsByClassName('modal-content')[0].innerHTML += `<h4 style="color: red;">Growth Areas</h4>`
+        // document.getElementsByClassName('modal-content')[1].innerHTML += `<h4 style="color: red;">Top5Stuff</h4>`
+
         for(let i of growthAreas){
             document.getElementsByClassName('modal-content')[0].innerHTML += `<p>${i}</p>`
         }   
@@ -59,8 +62,8 @@
         addModal(0);
         addModal(1);
         let cardBody = document.getElementsByClassName('card-body');
-        // cardBody[0].addEventListener('click',()=>{
-        //     document.location.href = "";
-        // });
+        cardBody[0].addEventListener('click',()=>{
+            // document.location.href = "../boards/druva.html";
+        });
     }
 })();
