@@ -5,5 +5,5 @@
     let registration = dataBase1.filter((val) => {
         return val.HrOracleId == OracleId;
     }
-    document.getElementById('').innerHTML = `<p><b>Feedback from &nbsp;</b>${details.FirstName}</p>`;
+    // document.getElementById('').innerHTML = `<p><b>Feedback from &nbsp;</b>${details.FirstName}</p>`;
   })();
