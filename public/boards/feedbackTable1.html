@@ -62,7 +62,7 @@
             "Creativity": 5,
             "Leadership": 5,
             "Openess": 5,
-            "People1Growth": 5,
+            "PeopleGrowth": 5,
             "Relationships": 5,
 
         },
@@ -159,7 +159,15 @@
 
 
         "use strict";
-        //let dataBase = window.dataBase;
+        var ini = "123557";
+        var match = [{}];
+        var j = 0;
+        for(var key in feedBack){
+        if (feedBack[key].OracleId == ini) {
+            match[j] = feedBack[key];
+            j++;
+        }
+    }
         // let requestedForOracleId = dataBase.getItem('OracleId')
 
         // let value = dataBase.find((val) => {
@@ -168,18 +176,11 @@
 
 
         //let table = document.getElementById('feedBacks');
-        //for (let fb of feedBack) {
-        //    if (fb.OracleId == val.OracleId) {
-        dataBase.forEach((user) => {
-            if (feedBack.OracleId === user.OracleId) {
-
-
-
-
+        for (var key in match) {
 
                 var col = [];
-                for (var i = 0; i < feedBack.length; i++) {
-                    for (var key in feedBack[i]) {
+                for (var i = 0; i < match.length; i++) {
+                    for (var key in match[i]) {
                         if (col.indexOf(key) === -1) {
                             col.push(key);
                         }
@@ -200,13 +201,13 @@
                 }
 
                 // ADD JSON DATA TO THE TABLE AS ROWS.
-                for (var i = 0; i < feedBack.length; i++) {
+                for (var i = 0; i < match.length; i++) {
 
                     tr = table.insertRow(-1);
 
                     for (var j = 0; j < col.length; j++) {
                         var tabCell = tr.insertCell(-1);
-                        tabCell.innerHTML = feedBack[i][col[j]];
+                        tabCell.innerHTML = match[i][col[j]];
                     }
                 }
 
@@ -216,8 +217,8 @@
                 divContainer.appendChild(table);
             }
         }
-        )
-    }
+
+    
 </script>
 
 </html>
