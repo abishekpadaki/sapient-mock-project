@@ -1,8 +1,33 @@
-var data = window.searchCards;
+
+var x= sessionStorage.getItem('st');
+    
+console.log(x);
+
+var data = window.dataBase;
 console.log(data);
+var match=[{}];
+
 
 var htmltxt=document.getElementById('main_body');
-for (var key in data) {
+
+var j=0;
+for(var key in data){
+    
+        
+
+if (data[key].OracleId==x){
+    match[j]=data[key];
+    j++;
+}
+
+else if(data[key].FirstName==x){
+    match[j]=data[key];
+    j++;
+    }
+
+}
+if(j>0){
+for (var key in match) {
     
     htmltxt.innerHTML +=`<div class="row">
 
@@ -11,11 +36,11 @@ for (var key in data) {
     <div class="card-body">
         <div class="row">
             <div class="profile_pic col-md-6">
-                <img src="${data[key].profilePic}" style="width:100px;height:100px;" align="left">
+                <img src="${match[key].profilePic}" style="width:100px;height:100px;" align="left">
                 <div style="text-align: center; font-size: 20px;">
-                <b>${data[key].FirstName}&nbsp;${data[key].LastName}</b><br>
-                ${data[key].OracleID}<br>
-                ${data[key].role}
+                <b>${match[key].FirstName}&nbsp;${match[key].LastName}</b><br>
+                ${match[key].OracleId}<br>
+                ${match[key].role}
 
             </div>
 
@@ -38,4 +63,9 @@ for (var key in data) {
 
 </div>
 </div>`;
+}
+}
+
+else{
+    htmltxt.innerHTML +=`<h1>Sorry, No match found</h1>`;
 }

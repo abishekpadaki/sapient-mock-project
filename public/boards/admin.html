@@ -49,10 +49,12 @@
                 <div class="row ml-2 mt-4">
                     <div class="form-group has-search ">
                         <span class="fa fa-search form-control-feedback"></span>
-                        <input type="text" class="form-control" placeholder="Search Employee ...">
+                        <input type="text" id="searchTxt" class="form-control" placeholder="Search Employee ...">
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-primary ml-3">Enter</button>
+                        <button type="submit" onclick="searchFunction()"
+                            onsubmit="searchFunction()"
+                            class="btn btn-primary ml-3">Enter</button>
                     </div>
                 </div>
             </div>
@@ -142,7 +144,7 @@
                         </span></b>
                 </div>
                 <div class="mt-4">
-                    <b><span class="fBgot" style="color:rgb(102, 102, 102)"> Got Feed Back from 
+                    <b><span class="fBgot" style="color:rgb(102, 102, 102)"> Got Feed Back from
                         </span></b>
                 </div>
             </div>
@@ -156,12 +158,14 @@
         </div>
     </div>
 
-        <script src="../js/admin.js"></script>
-        <script src="../js/dropDown.js"></script>
-        <script src="../js/modal.js"></script>
-        <script src="../js/reqreg.js"></script>
-        <script src="../js/reqsa.js"></script>
-        
+    <script src="../js/admin.js"></script>
+    <script src="../js/notifications.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/reqreg.js"></script>
+    <script src="../js/reqsa.js"></script>
+    <script src="../js/search.js"></script>
+
 </body>
 <!--  -->
+
 </html>
