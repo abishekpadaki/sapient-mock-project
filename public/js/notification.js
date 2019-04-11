@@ -7,6 +7,7 @@
   let requests = window.requests;
 
   let dropDwnCnt = document.getElementById('dropDownContent');
+  let dropDwnCntReg = document.getElementById('dropDownContentRegister');
 
   let link;
 

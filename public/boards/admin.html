@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Admin Dashboard</title>
+    <title>Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -12,7 +12,6 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         
     <link rel="stylesheet" href="../css/fb_cards.css">
@@ -45,7 +44,7 @@
             </div>
 
             <div class="log_out col-md-4 mt-4">
-                <div class="dropdown mx-4">
+                <div class="dropdown mx-1">
                     <button class="btn btn-primary notification" id="dropDownBtn">
                         <i class="fas fa-bell"></i>
                         <span style="visibility:hidden" class="badge">0</span>
@@ -92,29 +91,20 @@
                             </p>
                         </div>
                         <div class="row fb_card_links">
-                            <button class="btn btn-danger" id="growth_btn">Growth Areas</button>&nbsp; &nbsp; <button
-                                class="btn btn-danger" id="top5_btn">Top 5</button>
+                            <button class="btn btn-danger modalBtn" >Growth Areas</button>&nbsp; &nbsp; <button
+                                class="btn btn-danger modalBtn" >Top 5</button>
 
-                            <div id="growthAreas" class="modal">
+                            <div class="modal">
                                 <div class="modal-content">
                                     <div class="close">&times;</div>
                                     <h4 style="color: red;">Growth Areas</h4>
-                                    <p>Can do better</p>
-                                        <p>Reason 2</p>
-                                        <p>Stop giving unnecessary lectures</p>
-                                        <p>Just another sentence</p>
                                 </div>
-                            </div>
+                            </div>  
 
-                            <div id="top5Stuff" class="modal">
+                            <div class="modal">
                                 <div class="modal-content">
                                     <div class="close">&times;</div>
                                     <h4 style="color: red;">Top 5 stuff</h4>
-                                    <p>He is wow</p>
-                                        <p>Amaze core values</p>
-                                        <p>Full openness</p>
-                                        <p>super communication</p>
-                                        <p>Very leadership material</p>
                                 </div>
                             </div>
                         </div>
@@ -127,10 +117,29 @@
             </div>
 
         </div>
+        <div class="row mt-4">
+            <div class="col-3">
+                <div class="mt-4">
+                    <b><span style="color:rgb(36, 41, 46)"> Count Of Candidates
+                        </span></b>
+                </div>
+                <div class="mt-4">
+                    <b><span class="fBgiven" style="color:rgb(102, 102, 102)"> Feed Back Given
+                        </span></b>
+                </div>
+                <div class="mt-4">
+                    <b><span class="fBgot" style="color:rgb(102, 102, 102)"> Got Feed Back from 
+                        </span></b>
+                </div>
+            </div>
+            <div class="col-9">
+
+            </div>
+        </div>
     </div>
 
     <script src="../js/admin.js"></script>
-    <script src="../js/dropDown.js"></script>
+    <script src="../js/notifications.js"></script>
     <script src="../js/modal.js"></script>
 
 </body>
