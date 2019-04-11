@@ -3,7 +3,7 @@ if(role1 == "PM"){
  let row = document.getElementById('reqsa');
  row.innerHTML += 
 
- ` <div class="card mr-5 " style="width: 500px; height:210px;">
+ ` <div class="card mr-3" style="width: 32rem; height:13.2rem;">
      <div class="card-body">
          <h5>Request SA for email</h5>
              <div class="form-group">
