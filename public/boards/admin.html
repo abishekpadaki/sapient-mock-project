@@ -13,17 +13,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-        
+
     <link rel="stylesheet" href="../css/fb_cards.css">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/super_admin.css">
     <script src="../jsonData/feedBackData.js"></script>
     <script src="../jsonData/peopleDetails.js"></script>
     <script src="../jsonData/requestDb.js"></script>
+    <script src="../jsonData/registration.js"></script>
 </head>
 
-<body>
-
+<body class>
     <nav class="navbar">
         <div class="row col-md-12" style="height:100px;">
             <div class="col-md-3">
@@ -43,20 +43,25 @@
                 </div>
             </div>
 
-            <div class="log_out col-md-4 mt-4">
-                <div class="dropdown mx-1">
-                    <button class="btn btn-primary notification" id="dropDownBtn">
-                        <i class="fas fa-bell"></i>
-                        <span style="visibility:hidden" class="badge">0</span>
-                    </button>
+            <div class="col-md-4 mt-4">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="dropdown">
+                            <button class="btn btn-primary notification" id="dropDownBtn">
+                                <i class="fas fa-bell"></i>
+                                <span style="visibility:hidden" class="badge">0</span>
+                            </button>
+                            <div class="dropdown-content">
+                                <h3 class="requestfb">FeedBack Requests</h3>
+                            </div>
 
-                    <div class="dropdown-content" id="dropDownContent">
-                        <h3 class="requestfb">FeedBack Requests</h3>
+                        </div>
+                        <div class="dropdown ml-2"></div>
                     </div>
+                    <a href=""><i class="fas fa-sign-out-alt fa-lg"></i>
+                        Log Out</a>
                 </div>
-                <span class="dropdownRegister mx-2"></span>
-                <a href=""><i class="fas fa-sign-out-alt fa-lg"></i>
-                    Log Out</a>
+
             </div>
         </div>
     </nav>
@@ -82,25 +87,25 @@
             </div>
             <div class="col-9">
                 <div class="card card_one col-md-8" style="width: 50rem;">
-                    <div class="card-body"id="card">
+                    <div class="card-body" id="card">
                         <div class="row fb_card_title">
-                            <p id = "cardTitle">
+                            <p id="cardTitle">
                             </p>
                         </div>
                         <div class="row fb_text">
-                            <p id="feedBackCardtxt"> 
+                            <p id="feedBackCardtxt">
                             </p>
                         </div>
                         <div class="row fb_card_links">
-                            <button class="btn btn-danger modalBtn" >Growth Areas</button>&nbsp; &nbsp; <button
-                                class="btn btn-danger modalBtn" >Top 5</button>
+                            <button class="btn btn-danger modalBtn">Growth Areas</button>&nbsp; &nbsp; <button
+                                class="btn btn-danger modalBtn">Top 5</button>
 
                             <div class="modal">
                                 <div class="modal-content">
                                     <div class="close">&times;</div>
                                     <h4 style="color: red;">Growth Areas</h4>
                                 </div>
-                            </div>  
+                            </div>
 
                             <div class="modal">
                                 <div class="modal-content">
@@ -108,6 +113,11 @@
                                     <h4 style="color: red;">Top 5 stuff</h4>
                                 </div>
                             </div>
+                            <div class="modal">
+                                <div class="modal-content">
+                                </div>
+                            </div>
+
                         </div>
                         <div class="row fb_card_rating">
                             <b>Rating:&nbsp;</b> <i class="far fa-star "></i> &nbsp;<b id="rating"></b>
@@ -129,7 +139,7 @@
                         </span></b>
                 </div>
                 <div class="mt-4">
-                    <b><span class="fBgot" style="color:rgb(102, 102, 102)"> Got Feed Back from 
+                    <b><span class="fBgot" style="color:rgb(102, 102, 102)"> Got Feed Back from
                         </span></b>
                 </div>
             </div>
@@ -139,10 +149,13 @@
         </div>
     </div>
 
+
     <script src="../js/admin.js"></script>
     <script src="../js/notifications.js"></script>
     <script src="../js/modal.js"></script>
-
+    <script src="../js/retrieveReg.js"></script>
 </body>
 
 </html>
+
+

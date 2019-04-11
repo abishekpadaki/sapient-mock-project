@@ -6,8 +6,7 @@
 
   let requests = window.requests;
 
-  let dropDwnCnt = document.getElementById('dropDownContent');
-  let dropDwnCntReg = document.getElementById('dropDownContentRegister');
+  let dropDwnCnt = document.getElementsByClassName('dropdown-content')[0];
 
   let link;
 

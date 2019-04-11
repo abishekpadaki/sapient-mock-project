@@ -6,7 +6,7 @@
 
   let requests = window.requests;
 
-  let dropDwnCnt = document.getElementById('dropDownContent');
+  let notificationsCnt = document.getElementsByClassName('dropdown-content')[0];
 
   let link;
 
@@ -27,7 +27,7 @@
 
   let updateNotifications = (notifications) => {
 
-    dropDwnCnt.innerHTML = `<h3 class="requestfb">Notifications</h3> <hr>`;
+    notificationsCnt.innerHTML = `<h3 class="requestfb">Notifications</h3> <hr>`;
 
     for (let i = 0; i < notifications.Requester.length; i++) {
 
@@ -39,7 +39,7 @@
         return val.OracleId == notifications.RequestedFor[i];
       });
 
-      dropDwnCnt.innerHTML += `
+      notificationsCnt.innerHTML += `
             <span class="requestCnt">
                 <b>${dataBase[requester].FirstName}</b>
                 <p hidden>${dataBase[requester].OracleId}</p>
@@ -57,9 +57,9 @@
 
   updateNotifications(notifications);
 
-  dropDwnCnt.addEventListener('click', (event) => {
+  notificationsCnt.addEventListener('click', (event) => {
 
-    let data, flag = 0;
+    let data,flag = 0,badge;
 
     if (event.target.tagName === "B") {
         data = event.target.parentElement.getElementsByTagName('P');
@@ -72,7 +72,7 @@
     }
 
     if (flag) {
-        let badge = document.getElementsByClassName('badge')[0];
+        badge = document.getElementsByClassName('badge')[0];
         badge.innerHTML = parseInt(badge.innerHTML) - 1;
 
       sessionStorage.setItem("requesterOracleId", parseInt(data[0].innerHTML));

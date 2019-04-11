@@ -2,6 +2,7 @@
     "use strict";
     let dataBase = window.dataBase;
     let feedBack = window.feedBack;
+
     let requesterOracleId = sessionStorage.getItem('requesterOracleId');
     let requestedForOracleId = sessionStorage.getItem('requestedForOracleId')
 
